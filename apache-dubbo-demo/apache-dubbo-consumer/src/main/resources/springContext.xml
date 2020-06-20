@@ -10,8 +10,7 @@
     <!-- 用于配置连接注册中心相关信息 -->
     <dubbo:registry protocol="zookeeper" address="192.168.41.129:2181" client="zkclient" />
     <!-- 引用配置 	用于创建一个远程接口服务代理 -->
-    <dubbo:reference id="helloService" check="false" interface="com.zhq.HelloService"/>
     <dubbo:reference id="demoService" check="false" interface="com.zhq.DemoService">
-        <dubbo:method name="sayHelloAsync" async="true" />
+        <dubbo:method name="sayHelloAsync" async="true" timeout="2000" />
     </dubbo:reference>
 </beans>

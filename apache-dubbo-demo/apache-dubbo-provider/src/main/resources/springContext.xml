@@ -14,9 +14,7 @@
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- Spring的Bean -->
-    <bean id="helloService" class="com.zhq.HelloServiceImpl" />
     <bean id="demoService" class="com.zhq.DemoServiceImpl" />
     <!-- 服务配置，暴露一个接口服务  -->
-    <dubbo:service interface="com.zhq.HelloService" ref="helloService" />
-    <dubbo:service interface="com.zhq.DemoService" ref="demoService" />
+    <dubbo:service interface="com.zhq.DemoService" ref="demoService" timeout="3000" />
 </beans>
