@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!-- 消费者方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="spring-dubbo-consumer"/>
+    <!-- 用于配置连接注册中心相关信息 -->
+    <dubbo:registry protocol="zookeeper" address="192.168.41.129:2181" client="zkclient" />
+    <!-- 引用配置 	用于创建一个远程接口服务代理 -->
+    <dubbo:reference id="helloService" check="false" interface="com.zhq.HelloService"/>
+</beans>
