@@ -11,6 +11,7 @@ import java.util.concurrent.Future;
  * @Date 2020/6/20 21:34
  */
 public class DemoConsumer {
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("springContext.xml");
         context.start();
@@ -25,10 +26,6 @@ public class DemoConsumer {
         System.out.println(result);
         long end = System.currentTimeMillis();
         System.out.println("invoke consume : " + (end - start) / 1000);
-
-
-
-
 
     }
 }

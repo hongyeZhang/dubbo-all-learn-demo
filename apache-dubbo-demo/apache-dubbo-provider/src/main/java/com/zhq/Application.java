@@ -12,6 +12,7 @@ public class Application {
     public static void main(String[] args) throws IOException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("springContext.xml");
         context.start();
+        System.out.println("provider start over");
         System.in.read();
     }
 }
