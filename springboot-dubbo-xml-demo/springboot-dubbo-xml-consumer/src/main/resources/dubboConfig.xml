@@ -16,5 +16,8 @@
 
     <!--声明需要暴露的服务接口-->
     <dubbo:reference id="helloService" interface="com.zhq.HelloService"/>
+    <dubbo:reference id="testService" interface="com.zhq.TestService">
+        <dubbo:method name="sayHello" async="true" timeout="3000"/>
+    </dubbo:reference>
 
 </beans>

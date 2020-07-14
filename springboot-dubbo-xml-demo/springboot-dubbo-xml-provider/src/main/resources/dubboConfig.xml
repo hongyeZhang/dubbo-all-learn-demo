@@ -18,8 +18,10 @@
 
     <!--在spring中注册bean-->
     <bean id="helloService" class="com.zhq.HelloServiceImpl"/>
+    <bean id="testService" class="com.zhq.TestServiceImpl"/>
 
     <!--声明需要暴露的服务接口-->
     <dubbo:service interface="com.zhq.HelloService" ref="helloService"/>
+    <dubbo:service interface="com.zhq.TestService" ref="testService"/>
 
 </beans>
