@@ -18,6 +18,7 @@
     <dubbo:reference id="helloService" interface="com.zhq.HelloService"/>
     <dubbo:reference id="testService" interface="com.zhq.TestService">
         <dubbo:method name="sayHello" async="true" timeout="3000"/>
+        <dubbo:method name="sayHello2" async="true" timeout="3000"/>
     </dubbo:reference>
 
 </beans>

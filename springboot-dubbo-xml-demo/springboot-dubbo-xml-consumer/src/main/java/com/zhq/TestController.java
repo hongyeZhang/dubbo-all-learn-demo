@@ -21,7 +21,8 @@ public class TestController {
 
     @RequestMapping(value = "/test/sayHello")
     public String sayHello() throws Exception {
-        testService.sayHello("zhq");
+        String zhq = testService.sayHello("zhq");
+        logger.info("instant result = {}", zhq);
         Future<String> future = RpcContext.getContext().getFuture();
         logger.info("after async invoke");
         String result = future.get();
